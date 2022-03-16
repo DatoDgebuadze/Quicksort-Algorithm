@@ -7,16 +7,16 @@ def quick_sort(sequence):
     if length <= 1:
         return sequence
     else:
-        pivot = sequence.pop()
+        algorithm = sequence.pop()
     
     items_greater = []
     items_lower = []
     for item in sequence:
-        if item > pivot:
+        if item > algorithm:
             items_greater.append(item)
         else:
             items_lower.append(item)
-    return quick_sort(items_lower) + [pivot] + quick_sort(items_greater)
+    return quick_sort(items_lower) + [algorithm] + quick_sort(items_greater)
 
 ## input any data you want down in this format, this is just an example.
 print(quick_sort([5,3,2,1,4]))
